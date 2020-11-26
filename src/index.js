@@ -11,14 +11,14 @@ import styles from './styles';
 const FRICTION = 8;
 
 const defaultComponentsConfig = {
-  success: ({ hide, text1, text2 }) => (
-    <SuccessToast onClose={hide} text1={text1} text2={text2} />
+  success: ({ hide, text1, text2, props:{onPress} }) => (
+    <SuccessToast onClose={hide} text1={text1} text2={text2} onPress={onPress} />
   ),
-  error: ({ hide, text1, text2 }) => (
-    <ErrorToast onClose={hide} text1={text1} text2={text2} />
+  error: ({ hide, text1, text2, props:{onPress} }) => (
+      <ErrorToast onClose={hide} text1={text1} text2={text2} onPress={onPress} />
   ),
-  info: ({ hide, text1, text2 }) => (
-    <InfoToast onClose={hide} text1={text1} text2={text2} />
+  info: ({ hide, text1, text2, props:{onPress} }) => (
+    <InfoToast onClose={hide} text1={text1} text2={text2} onPress={onPress} />
   )
 };
 
